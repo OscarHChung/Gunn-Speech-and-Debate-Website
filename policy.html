@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Policy - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary">PARLIAMENTARY</a>
+					<a id="current-page" href="policy">POLICY</a>
+					<a href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a href="about">ABOUT</a>
+			<a href="index">HOME</a>
+		</div>
+		<h3 class="page-title">POLICY TEAM</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+    		var isLoggedIn = false;
+			if(localStorage.getItem('logged') == 'yes') {
+      			isLoggedIn = true;
+      			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'accshow';
+      			}
+      			document.getElementById('loginnav').id = 'hidden';
+      			console.log("logged in");
+      			console.log(localStorage.getItem('accRow'));
+    		} else {
+    			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'loginnav';
+      			}
+      			document.getElementById('accshow').id = 'hidden';
+      			console.log("logged out");
+    		}
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<h3 class="mini-header">Updates</h3>
+	<div class="updates-row2">
+		<div>
+			<p><span class="updates-title">Nationals</span><br>Huge congratulations to Sachait Arun & <br>Evan Alexis for ranking <span class="red">second in the nation!</span></p>
+			<p><span class="updates-title">CFL State Quals</span><br>Congrats to the qualifiers:<ul>
+				<li>Claire Cheng & Mallika Parulekar</li>
+				<li>Nikki Suzani & Evan Alexis</li>
+				<li>Sachait Arun & Elijah Schacter</li></ul>
+			</p>
+			<p><span class="updates-title">CFL League 3</span><br>Congrats to teams Mallika Parulekar &<br>Claire Cheng and Andy Wang & Chris<br>Liao for going 4-0!</p>
+			<p><span class="updates-title">Arizona State University Invitational</span><br>Congrats to teams Sachait Arun & Elijah<br>Schacter for reaching quarterfinals<br>as well as Nikki Suzani & Evan Alexis<br>breaking double-octos!</p>
+			<p><span class="updates-title">CFL Policy/Parli</span><br>Congrats to Jacob Liao & Neha Muthiah<br>for going undefeated and<br>earning a wildcard to state quals!</p>
+			<p><span class="updates-title">Jon Schamber Invitational at the<br>University of the Pacific</span><br>Congrats to teams Sachait Arun &<br>Rishee Gupta and Nikki Suzani & Jared<br>Shirts for breaking to quarterfinals!</p>
+		</div>
+
+		<div>
+			<p><span class="updates-title">World Schools</span><br>Congrats to Policy debater Nikki<br>Suzzani and her World Schools team<br>for breaking to quarterfinals!</p>
+			<p><span class="updates-title">Stanford Invitational</span><br>Congrats to all the following teams!<ul>
+				<li>Sachait Arun & Nikki Suzani - Doubles</li>
+				<li>Evan Alexis & Neha Muthiah - Doubles</li></ul>
+			</p>
+			<p><span class="updates-title">James Logan MLK Invitational</span><br>Congrats to all the following teams!<ul>
+				<li>Jared Shirts & Bess Olshen - Finals!</li>
+				<li>Claire Cheng & Mallika Parulekar - Semifinals</li>
+				<li>Sachait Arun & Elijah Schacter - Quarterfinals</li>
+				<li>Evan Alexis & Nikki Suzani - Octos</li>
+				<li>Jacob Liao & Neha Muthiah - Octos</li></ul>
+			</p>
+			<p><span class="updates-title">SCU Dempsey Cronin Invitational</span><br>Congrats to the following teams:<ul>
+				<li>Bess Olshen & Jared Shirts - Semifinals</li>
+				<li>Evan Alexis & Elijah Schacter - Quarterfinals</li></ul>
+			</p>
+			<p><span class="updates-title">CFL SuperDebate 1</span><br>Congrats to teams Bess Olshen & Jared Shirts<br>and Evan Alexis & Nikki Suzani for<br>going undefeated and<br>earning a wildcard to state quals!</p>
+			<p><span class="updates-title">Jack Howe Memorial Tournament</span><br>Sachait Arun & Elijah Schacter<br>for breaking to double-octofinals!</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<div id="row2">
+		<img class="photos" src="img/policy1.png">
+		<img class="photos" src="img/policy2.png">
+	</div>
+
+	<div class="centered-div" style="width: 60%; margin: 0px 20% 40px 20%">
+		<p class="paragraph"><span class="debate-format">Policy Debate </span>revolves around a year-long resolution that encompasses a wide diversity of arguments. Under the resolution, or topic, each team presents its own plan to address a current problem in the United States; for 2019-2020, students will discuss US arms sales. Before tournaments, debaters collaborate to prepare extensive affirmative and negative evidence. Policy teaches skill such as nuanced argumentation, strong public speaking abilities, efficient research practices, and a depth of knowledge about the annual resolution.</p>
+		<span class="debate-format">Meets Wednesdays from 3-5 PM in Room N-206</span>
+	</div>
+	
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

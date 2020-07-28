@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Speech - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary">PARLIAMENTARY</a>
+					<a href="policy">POLICY</a>
+					<a id="current-page" href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a href="about">ABOUT</a>
+			<a href="index">HOME</a>
+		</div>
+		<h3 class="page-title">SPEECH TEAM</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+
+    		var isLoggedIn = false;
+			if(localStorage.getItem('logged') == 'yes') {
+      			isLoggedIn = true;
+      			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'accshow';
+      			}
+      			document.getElementById('loginnav').id = 'hidden';
+      			console.log("logged in");
+      			console.log(localStorage.getItem('accRow'));
+    		} else {
+    			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'loginnav';
+      			}
+      			document.getElementById('accshow').id = 'hidden';
+      			console.log("logged out");
+    		}
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<h3 class="mini-header">Updates</h3>
+	<div class="updates-row2">
+		<div>
+			<p><span class="updates-title">CFL Policy/Parli</span><br>Congrats to Brandon Chung who placed<br>2nd overall in Program Oral Interp!
+			</p>
+		</div>
+
+		<div>
+			<p><span class="updates-title">Jon Schamber Invitational<br>at the University of the Pacific</span><br>Congrats to Brandon Chung for advancing to<br>octofinals in Program Oral Interp!
+			</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="centered-div" style="width: 60%; margin: 0px 20% 40px 20%">
+		<p class="paragraph"><span class="debate-format">Gunn Speech </span>encompasses a variety of events that cater to all sorts of interests. In interp, students cut, block, and perform one or two-person pieces, playing from one to a multitude of characters, in comedy or drama. In platform, students write their own speeches with 3-step arguments on a topic of their choosing. In limited prep, students are given a new topic with only a half hour to craft a 7 minute speech every round, the most similar to debate among the three branches. All in all, speech is a great way to improve public speaking skills and persuasiveness.</p>
+		<p class="paragraph">Gunn Speech includes the following events: Interp, Platform, and Limited Prep; the most recognizable events are HI, DI, Duo, Oratory, and Extemp.</p>
+		<span class="debate-format">Meets Tuesdays from 3-5 PM in Room N-206</span>
+	</div>
+	
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

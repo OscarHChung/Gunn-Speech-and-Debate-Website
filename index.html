@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
+	<script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+</head>
+
+<body>
+	<div id="list-builder"></div>
+    <div id="popup-box">
+        <img src="img/close.png" id="popup-close" />
+        <div id="popup-box-content">
+            <h1>Subscribe to The Gunn Speech and Debate Newsletter</h1>
+            <p>
+                Stay up to date on the latest news by
+                subscribing to our newsletter.
+            </p>
+            <form id="popup-form">
+                <input autocomplete="off" autocorrect="off" spellcheck="false" type="text" name="name" placeholder="Full Name" id="fullname" required/>
+                <input autocomplete="off" autocorrect="off" spellcheck="false" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" title="Invalid Email Address" type="text" name="email" id="email" placeholder="Email Address" required/>
+                <button type="button" name="subscribe" id="subscribe">Subscribe</button>
+            </form>
+        </div>
+    </div>
+
+
+	<div class="bg-img">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary">PARLIAMENTARY</a>
+					<a href="policy">POLICY</a>
+					<a href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a href="about">ABOUT</a>
+			<a id="current-page" href="index">HOME</a>
+		</div>
+		<h3 class="homepage-title">GUNN SPEECH & DEBATE</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+
+		document.getElementById("subscribe").addEventListener("click", submit);
+	</script>
+
+	<h2 class="mini-header">Latest Team Updates</h2>
+
+	<div class="teamcard-row">
+		<a href="parliamentary" class="teamcard">
+			<img src="img/parliamentary-card.png" alt="Parliamentary Team" class="teamcard-photo">
+			<h3 class="teamcard-title">Parliamentary</h3>
+		</a>
+		<a href="policy" class="teamcard">
+			<img src="img/policy-card.png" alt="Policy Team" class="teamcard-photo">
+			<h3 class="teamcard-title">Policy</h3>
+		</a>
+		<a href="publicforum" class="teamcard">
+			<img src="img/publicforum-card.png" alt="Public Forum Team" class="teamcard-photo">
+			<h3 class="teamcard-title">Public Forum</h3>
+		</a>
+		<a href="speech" class="teamcard">
+			<img src="img/speech-card.png" alt="Speech Team" class="teamcard-photo">
+			<h3 class="teamcard-title">Speech</h3>
+		</a>
+	</div>
+
+	<hr>
+
+	<div id="slider">
+		<figure>
+			<img src="img/slideshow/slide1.jpg">
+			<img src="img/slideshow/slide2.jpg">
+			<img src="img/slideshow/slide3.jpg">
+			<img src="img/slideshow/slide4.jpg">
+			<img src="img/slideshow/slide5.jpg">
+			<img src="img/slideshow/slide6.jpg">
+			<img src="img/slideshow/slide1.jpg">
+		</figure>
+	</div>
+
+	<hr id="hr-below">
+
+	<h2 class="mini-header">From The Alumni</h2>
+	<div class="two-block">
+		<p class="quote" id="quote-top">​"[Debate is] a useful opportunity to learn more about the <br>intricacies of the way the world works and the issues it <br>faces, and also how to effectively communicate your <br>ideas on those issues."<span class="quote-speaker">– Ani Banerjee(Class of 2019)</span></p>
+		<p class="quote">​"Joining Speech and Debate was one of my best high <br>school decisions. You learn valuable skills and find a great <br>community of friends!"<br><span style="margin-left: 0;"class="quote-speaker">– Arjun Prabhakar(Class of 2019)</span></p>
+	</div>
+	<p class="quote-center">​"Gunn Speech and Debate had a massive impact on my time at Gunn and has given me confidence, analytical skills, and friends that I carry with me on to college. Gunn Speech and Debate allows you to grow through experience rather than sheltered simulations guaranteeing instant success and accolades. As a result, you will leave the program with a set of research and communication skills more valuable than what any other club at Gunn has to offer."<span class="quote-speaker">– Matthew Hamilton(Class of 2017)</span></p>
+	<p class="quote-center">​"Speech and Debate did more to shape my high school experience than any other activity. For someone who would have never ever thought of becoming a debater, Speech and Debate became a community that inspired me endlessly and honed all the skills that anyone would dream of having after high school."​<span class="quote-speaker">– Carolyn Wang(Class of 2018)</span></p>
+
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

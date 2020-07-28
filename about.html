@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>About Us - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary">PARLIAMENTARY</a>
+					<a href="policy">POLICY</a>
+					<a href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a id="current-page" href="about">ABOUT</a>
+			<a href="index">HOME</a>
+		</div>
+		<h3 class="page-title">ABOUT US</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+    		var isLoggedIn = false;
+			if(localStorage.getItem('logged') == 'yes') {
+      			isLoggedIn = true;
+      			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'accshow';
+      			}
+      			document.getElementById('loginnav').id = 'hidden';
+      			console.log("logged in");
+      			console.log(localStorage.getItem('accRow'));
+    		} else {
+    			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'loginnav';
+      			}
+      			document.getElementById('accshow').id = 'hidden';
+      			console.log("logged out");
+    		}
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<h2 class="mini-header">Our Mission</h2>
+	<p class="centered-paragraph">Dedicated to furthering education, self-confidence, and perseverance, Gunn Speech and Debate has not only given debaters the real-world tools for future success, but also inspired invaluable memories in alumni of an unforgettable community. Speech and Debate isn’t just a club: it’s a transformative experience that is accessible to anyone on campus, given the right amount of effort and passion.<br><br>Novice meetings are held in N-206 every Tuesday during lunch. Varsity meetings are also held in N-206 every Wednesday from 3-5 pm and 5-7pm.</p>
+
+	<hr>
+
+	<h2 class="mini-header">Advisors & Coaches</h2>
+	<div class="card-row1">
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/dianegleason.jpg" alt="Diane Gleason" class="card-photo">
+				<h3 class="card-name">Diane Gleason</h3>
+				<h3 class="card-title">Faculty Advisor</h3>
+			</div>
+		</div>
+	</div>
+	<div class="card-row4" id="coaches">
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/default.png" alt="N/A" class="card-photo">
+				<h3 class="card-name">N/A</h3>
+				<h3 class="card-title">Parliamentary Coach</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/default.png" alt="Reva Balakrishnan" class="card-photo">
+				<h3 class="card-name">Reva Balakrishnan</h3>
+				<h3 class="card-title">Public Forum Coach</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/default.png" alt="Tim Johnson" class="card-photo">
+				<h3 class="card-name">Tim Johnson</h3>
+				<h3 class="card-title">Policy Coach</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/default.png" alt="Hoon Ko" class="card-photo">
+				<h3 class="card-name">Hoon Ko</h3>
+				<h3 class="card-title">Speech Coach</h3>
+			</div>
+		</div>
+	</div>
+
+	<hr class="seventy-percent">
+
+	<h2 class="mini-header">2020-2021 Officer Team</h2>
+	<div class="card-row2">
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/sachaitarun.png" alt="Sachait Arun" class="card-photo">
+				<h3 class="card-name">Sachait Arun</h3>
+				<h3 class="card-title">Co-President</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/thomasli.png" alt="Thomas Li" class="card-photo">
+				<h3 class="card-name">Thomas Li</h3>
+				<h3 class="card-title">Co-President</h3>
+			</div>
+		</div>
+	</div>
+	<div class="card-row5">
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/anshikaagarwal.jpg" alt="Anshika Agarwal" class="card-photo">
+				<h3 class="card-name">Anshika Agarwal</h3>
+				<h3 class="card-title">Parliamentary Captain</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/bessolshen.jpg" alt="Bess Olshen" class="card-photo">
+				<h3 class="card-name">Bess Olshen</h3>
+				<h3 class="card-title">Policy Captain</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/default.png" alt="Hetva Joshi" class="card-photo">
+				<h3 class="card-name">Hetva Joshi</h3>
+				<h3 class="card-title">Public Forum Co-Captain</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/default.png" alt="Catherine Chu" class="card-photo">
+				<h3 class="card-name">Catherine Chu</h3>
+				<h3 class="card-title">Public Forum Co-Captain</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/brandonchung.png" alt="Brandon Chung" class="card-photo">
+				<h3 class="card-name">Brandon Chung</h3>
+				<h3 class="card-title">Speech Captain</h3>
+			</div>
+		</div>
+	</div>
+	<div class="card-row2">
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/jaredshirts.jpg" alt="Jared Shirts" class="card-photo">
+				<h3 class="card-name">Jared Shirts</h3>
+				<h3 class="card-title">Policy Vice Captain</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/default.png" alt="Neha Muthiah" class="card-photo">
+				<h3 class="card-name">Neha Muthiah</h3>
+				<h3 class="card-title">Novice Captain</h3>
+			</div>
+		</div>
+	</div>
+	<div class="card-row4">
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/nikkisuzani.png" alt="Nikki Suzani" class="card-photo">
+				<h3 class="card-name">Nikki Suzani</h3>
+				<h3 class="card-title">Logistics Director</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/williamxuan.png" alt="William Xuan" class="card-photo">
+				<h3 class="card-name">William Xuan</h3>
+				<h3 class="card-title">Finance Director</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/anikarao-mruthyunjaya.jpg" alt="Anika Rao-Mruthyunjaya" class="card-photo">
+				<h3 class="card-name">Anika Rao-Mruthyunjaya</h3>
+				<h3 class="card-title">Communications Director</h3>
+			</div>
+		</div>
+		<div class="wrapper">
+			<div class="card">
+				<img src="img/oscarchung.jpg" alt="Oscar Chung" class="card-photo">
+				<h3 class="card-name">Oscar Chung</h3>
+				<h3 class="card-title">Webmaster</h3>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

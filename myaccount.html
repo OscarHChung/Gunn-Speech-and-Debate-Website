@@ -1,0 +1,173 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>My Account - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="myaccount.js"></script>
+	<script type="text/javascript" src="https://apis.google.com/js/api.js">
+    </script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index.html" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a style="border: solid 2px; border-color: white;" id="accshow" href="myaccount.html">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register.html">LOGIN/REGISTER</a>
+			<a href="summercamp.html">SUMMER CAMP</a>
+			<a href="contact.html">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters.html">FOR DEBATERS</a>
+					<a href="judges.html">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar.html">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary.html">PARLIAMENTARY</a>
+					<a href="policy.html">POLICY</a>
+					<a href="publicforum.html">PUBLIC FORUM</a>
+					<a href="speech.html">SPEECH</a>
+				</div>
+			</div>
+			<a href="about.html">ABOUT</a>
+			<a href="index.html">HOME</a>
+		</div>
+		<h3 class="page-title">MY ACCOUNT</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<div id="complete-reg-hide">
+		<div id="acc-complete-border-hide" style="height: 800px">
+			<div id="acc-complete-div" style="height: 800px">
+				<form>
+					<br><br>
+					<h3 class="mini-header" style="color: white;">Complete Registration</h3>
+					<br>
+					<input autocomplete="off" autocorrect="off" spellcheck="false" type="text" id="phone" class="inputs" placeholder="Phone Number" required>
+					<input autocomplete="off" autocorrect="off" spellcheck="false" type="text" id="judge-name" class="inputs" placeholder="Judge's Name" required>
+					<input autocomplete="off" autocorrect="off" spellcheck="false" type="text" id="judge-email" class="inputs" placeholder="Judge's Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" title="Invalid Email Address" required>
+					<input autocomplete="off" autocorrect="off" spellcheck="false" type="text" id="judge-phone" class="inputs" placeholder="Judge's Phone Number" required>
+
+					<h3 class="mini-header" style="font-size: 25px;">Debate Branch(es)</h3>
+					<br>
+					<label class="checkbox-container">Parli
+					  <input type="checkbox" checked="checked" id="parli-check">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox-container">Policy
+					  <input type="checkbox" id="policy-check">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox-container">PF
+					  <input type="checkbox" id="pf-check">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="checkbox-container">Speech
+					  <input type="checkbox" id="speech-check">
+					  <span class="checkmark"></span>
+					</label>
+
+					<div id="submit-wrapper" style="margin-top: 40px;">
+						<button type="button" id="submitbutton">Finish</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div id="acc-info-hide">
+		
+	</div>
+
+	<script>
+		const tx = document.getElementsByTagName('textarea');
+		for (let i = 0; i < tx.length; i++) {
+  			tx[i].setAttribute('style', 'height:' + (tx[i].scrollHeight) + 'px;overflow-y:hidden;');
+  			tx[i].addEventListener("input", OnInput, false);
+		}
+
+		function OnInput() {
+  			this.style.height = 'auto';
+  			this.style.height = (this.scrollHeight) + 'px';
+		}
+
+		document.getElementById("submitbutton").addEventListener("click", handleClientLoad);
+
+	</script>
+
+	<div id="logout-wrapper">
+		<button type="button" id="logoutbutton">Logout</button>
+	</div>
+
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

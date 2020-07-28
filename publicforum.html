@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Public Forum - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary">PARLIAMENTARY</a>
+					<a href="policy">POLICY</a>
+					<a id="current-page" href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a href="about">ABOUT</a>
+			<a href="index">HOME</a>
+		</div>
+		<h3 class="page-title">PUBLIC FORUM TEAM</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+    		var isLoggedIn = false;
+			if(localStorage.getItem('logged') == 'yes') {
+      			isLoggedIn = true;
+      			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'accshow';
+      			}
+      			document.getElementById('loginnav').id = 'hidden';
+      			console.log("logged in");
+      			console.log(localStorage.getItem('accRow'));
+    		} else {
+    			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'loginnav';
+      			}
+      			document.getElementById('accshow').id = 'hidden';
+      			console.log("logged out");
+    		}
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<h3 class="mini-header">Updates</h3>
+	<div class="updates-row2">
+		<div>
+			<p><span class="updates-title">CFL State Quals</span><br>Congrats to the qualifiers!<ul>
+				<li>Max Zhang & Reva Balakrishnan</li>
+				<li>Ishan Balakrishnan & Ezra Kohrman</li>
+				<li>Catherine Chu & Hetva Joshi</li></ul>
+			</p>
+			<p><span class="updates-title">James Logan MLK Invitational</span><br>Congrats to Ishan Balakrishnan & Ezra<br>Kohrman for reaching quarterfinals and<br>Reva Balakrishnan & Max Zhang<br>for breaking to doubles!
+			</p>
+			<p><span class="updates-title">Arizona State University Invitational</span><br>Congrats to Ishan Balakrishnan & Ezra<br>Kohrman for breaking to doubles-octos!
+			</p>
+			<p><span class="updates-title">Yale Invitational</span><br>Congrats to Ishan and Reva Balakrishnan<br>for reaching double-octofinals! They recieved<br>4th and 17th speaker, respectively.
+			</p>
+			<p><span class="updates-title">9th Annual Robert Garcia Invitational</span><br>Congrats to Ishan and Reva Balakrishnan<br>for <span class="red">championing</span> the Garcia Invitational!
+			</p>
+		</div>
+
+		<div>
+			<p><span class="updates-title">Nationals</span><br>Congratulations to Reva and<br> Ishan Balakrishnan<br>for breaking in Nationals!</p>
+			<p><span class="updates-title">Cal Invitational</span><br>Congrats to Ishan Balakrishnan & Ezra Kohrman<br>for <span class="red">championing</span> the tournament, winning every ballot,<br>and tying for 2nd place speaker!<br>Congrats to Max Zhang & Reva Balakrishnan as well<br>for reaching double-octos!
+			</p>
+			<p><span class="updates-title">Stanford Invitational</span><br>Congrats to the following teams/people!<ul>
+				<li>Ishan Balakrishnan & Ezra Kohrman - Octos</li>
+				<li>Reva Balakrishnan & Max Zhang - Doubles</li>
+				<li>Ezra Kohrman - 3rd Speaker</li>
+				<li>Reva Balakrishnan - 7th Speaker</li></ul>
+			</p>
+			<p><span class="updates-title">Presentational Voices Invitational</span><br>Congrats to Ishan Balakrishnan & Ezra<br>Kohrman for reaching semi-finals and earning<br>a qualification bid to the Tournament of<br>Champions! Ishan and Ezra were 2nd and 16th<br>place speaker overall respectively.
+			</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<div id="row2">
+		<img class="photos" src="img/publicforum1.png">
+		<img class="photos" src="img/publicforum2.png">
+	</div>
+
+	<div class="centered-div" style="width: 60%; margin: 0px 20% 40px 20%">
+		<p class="paragraph"><span class="debate-format">Public Forum Debate </span>involves opposing teams of two that advocate for or rejects a position posed by the resolution. Each team debates either in affirmation or negation of the resolution, in 1st or 2nd speaker order. Thus, teams are required to be able to defend both sides of the resolution. Students present cases, engage in rebuttal and refutation, and also participate in a “crossfire” (similar to a cross examination) with the opportunity to question the opposing team. A central tenet of the debate is that the clash of ideas must be communicated in a manner persuasive to the non-specialist or "citizen judge." Public forum debaters gain a breadth of knowledge about domestic and foreign policy as well as international relations.</p>
+		<span class="debate-format">Meets Wednesdays from 5-7 PM in Room N-206</span>
+	</div>
+	
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

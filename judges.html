@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Judges - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a id="current-page" href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary">PARLIAMENTARY</a>
+					<a href="policy">POLICY</a>
+					<a href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a href="about">ABOUT</a>
+			<a href="index">HOME</a>
+		</div>
+		<h3 class="page-title">FOR JUDGES</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+    		var isLoggedIn = false;
+			if(localStorage.getItem('logged') == 'yes') {
+      			isLoggedIn = true;
+      			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'accshow';
+      			}
+      			document.getElementById('loginnav').id = 'hidden';
+      			console.log("logged in");
+      			console.log(localStorage.getItem('accRow'));
+    		} else {
+    			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'loginnav';
+      			}
+      			document.getElementById('accshow').id = 'hidden';
+      			console.log("logged out");
+    		}
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<h3 class="mini-header">What do I need to be a Tournament Judge?</h3>
+	<div class="centered-div" style="width: 70%; margin: 30px 15% 60px 15%;">
+		<p class="paragraph">
+			JUDGING IS REQUIRED. Each school is obligated by league policy to provide judges at each tournament they attend, usually one judge all day for every two or three students competing. Most of the judging is done by students’ parents, who take turns helping the team meet their obligations. You will need to know: It is important that you arrive on time so your school and its student competitors will not be penalized for insufficient judges
+			The date and location of the tournament
+			The start time and length of your judging assignment (e.g. half day, all day)
+			It is important that you arrive on time so your school and its student competitors will not be penalized for insufficient judges.<br><br>
+
+			EVEN WHEN YOU ARE BRAND NEW AT THIS, YOU CAN BE A COMPETENT JUDGE. Speech and debate is about communication and we want students to learn to communicate with all kinds of audiences. We will give you standards for each event, so you will know what to look for, but beyond that, you will simply be choosing what you thought were the best presentations or debating. It is important to realize that a competitor’s self esteem, college career and future destiny do not depend on your ballot!<br><br>
+
+			YOU WILL HEAR VERBAL JUDGING INSTRUCTIONS at our league tournaments before ballots are handed out. There will also be written instructions either on the ballot sheets or in a separate handout. (If you judge at college “invitationals,” where many judges are coaches or college students with competition experience, the tournament staff tends to assume everyone knows how to judge. However, written instructions are often available and worth asking for. You can assume the criteria for all events are the same as at our league tournaments unless you are told otherwise.)<br><br>
+
+			STUDENTS ARE DISTRIBUTED INTO PANELS, each of which competes in a separate classroom. One or more judges are assigned to the panel. Everyone goes to their rooms, the students compete and the judges evaluate them. Students then return to their designated area and judges return to the judges’ room and turn in their ballots. That completes a round of competition, which usually takes about two hours.<br><br>
+
+			MOST TOURNAMENTS HAVE THREE OR FOUR ROUNDS of competition followed by an awards ceremony. At the end of the tournament, after awards have been given out, coaches receive debate ballots and comment sheets to pass on to their students.<br><br>
+
+			TOURNAMENTS TYPICALLY HAVE ONLY ONE CATEGORY OF EVENT, e.g. Debate, Individual Events (IE) or Student Congress. A few tournaments combine Debate and IE in alternating rounds.
+		</p>
+	</div>
+
+	<hr>
+
+	<h3 class="mini-header">What should I bring?</h3>
+	<div class="centered-div" style="width: 70%; margin: 30px 15% 60px 15%;">
+		<p class="paragraph">
+			<ul>
+				<li>An electronic device that you feel comfortable typing on and that can connect to the internet.</li>
+				<li>Paper and pens or pencils.</li>
+				<li>A timepiece for timing speeches, such as a stopwatch, digital watch with a stopwatch function, or watch with a second hand.</li>
+				<li>A book or other quiet portable activity to fill any waiting time.</li>
+			</ul>
+
+			<p class="paragraph">
+			Wear comfortable clothes, especially shoes. Competitors need to dress up to make a good impression, but judges perform best when they are comfortable!<br><br>
+
+			What should I do when I arrive at the host school? Depending on the tournament, instructions may vary; more detailed specifics will be emailed beforehand.<br><br>
+
+			PLEASE DO NOT SMOKE INSIDE ANY SCHOOL BUILDINGS.</p>
+		</p>
+	</div>
+
+	<hr>
+
+	<h3 class="mini-header">What do I do during the round?</h3>
+	<div class="centered-div" style="width: 70%; margin: 30px 15% 60px 15%;">
+		<p class="paragraph">
+			<ol>
+				<li>CHECK IN WITH MS. GLEASON OR OTHER CHAPERONES. Directions will depend on the specific tournament. [The specific person to contact will be identified in the tournament email].</li>
+				<li>FIND THE JUDGES’ ROOM. Look for a sign, follow the people, and ask any adult.</li>
+				<li>TAKE A SEAT IN THE JUDGES’ ROOM and help yourself to refreshments. There will be snacks to keep you going all day and lunch as well – it’s the least we can do! Get a map of the school and learn where the bathrooms are. Pick up the written judging instructions if available and review them. Make yourself comfortable until your name is called or until you are notified electronically.</li>
+				<li>WHEN YOU HAVE BEEN ASSIGNED TO A ROOM, head straight there. Debaters should not enter the room until you have arrived.</li>
+				<li>Each sort of event has its own kind of ballot, but all are similar in that you need to:</li>
+				<li>Get set up to judge.</li>
+				<ol>
+					<li>LET THE CONTESTANTS KNOW YOU ARE READY. Check that all assigned judge(s) have arrived. If the round is excessively delayed by a lack of judging, contact the appropriate official.</li>
+					<li>REMEMBER THAT YOU ARE THE JUDGE. You are in charge and the students know it.</li>
+					<li>TAKE A SEAT THAT GIVES YOU A CLEAR VIEW of the front of the room where the competitors will speak. Some judges like to sit at the front while others prefer to be toward the back.</li>
+					<li>CHECK THE BALLOT to make sure the assigned students have arrived. STUDENTS ARE IDENTIFIED BY A CODE, usually a letter plus a number. This relative anonymity is intended to promote judge objectivity, as a particular school or student may have some sort of reputation in a judge’s mind.</li>
+					<li>(If you discover that your own child is in the panel, or someone you know too personally to be able to judge objectively, return to the judges’ room to be reassigned.)</li>
+				</ol>
+				<li>Listen and make notes.</li>
+				<ul>
+					<li>IN DEBATE EVENTS, many judges find the structured note-taking called “flowing” to be helpful. If your student or student’s coach has not had an opportunity to explain this technique before you come to the tournament, ask an experienced judge to show you how to do it while you are waiting for your name to be called.</li>
+				</ul>
+				<li>TIME THE SPEECH, unless a timekeeper has been assigned to your room or (as often happens in debate) the students have their own stopwatches and will time themselves.</li>
+				<li>SET ASIDE YOUR PERSONAL FEELINGS, e.g. opinions that may disagree with the contestant’s, or different taste in literature. Try to evaluate objectively.</li>
+				<li>DO NOT ALLOW ANYONE TO INTERRUPT OR OTHERWISE RATTLE A SPEAKER. If severe distractions occur, please take these into account when evaluating the student’s performance.</li>
+				<ol>
+					<li>Fill out the identifying information asked for on the ballot (e.g. students’ codes, round number, judge’s name)</li>
+					<li>Indicate your decisions</li>
+					<li>Write comments (on the ballot itself or on separate comment sheets)</li>
+					<li>Sign your ballot and return it IMMEDIATELY IN PERSON to the judges’ room (more than one tournament has been delayed because a judge forgot to turn in a ballot!).</li>
+				</ol>
+				<li>The judge decides who won the debate and also who was the better speaker (indicated by giving “speaker points” and/or ranking-ordering the contestants). The win/loss records of the students determine who advances in the tournament.</li>
+				<li>PLEASE DO NOT DISCUSS YOUR DECISIONS WITH ANYONE before the end of the tournament. When you serve as part of a panel of judges, arrive at your decisions independently. Do not tell contestants their ranks or whether they won or lost their debates - they will receive that information at the end of the tournament.</li>
+				<li>DO PROVIDE WRITTEN/TYPED FEEDBACK to the students in the form of comments on the back of the comment sheets or in the space provided on the debate ballot. This gives the students and their coaches a fuller indication of what the contestant did well and how the performance could be improved. Students who receive lower than first place or who lose the debate are especially interested in the judge’s reasons. Your feedback makes speech and debate competition an authentic educational experience for the contestants.</li>
+			</ol>
+		</p>
+	</div>
+
+	<hr>
+
+	<h3 class="mini-header">What do I do with the ballots?</h3>
+	<div class="centered-div" style="width: 70%; margin: 30px 15% 60px 15%;">
+		<p class="paragraph">
+			After all contestants have spoken or the debate, complete your ballots. You may remain in the classroom for a few minutes to do this. (If you find it is taking you a long time to make your decisions, it’s best to return to the judges’ room to finish so the next round can use the room.)
+		</p>
+	</div>
+
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

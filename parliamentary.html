@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Parliamentary - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a id="current-page" href="parliamentary">PARLIAMENTARY</a>
+					<a href="policy">POLICY</a>
+					<a href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a href="about">ABOUT</a>
+			<a href="index">HOME</a>
+		</div>
+		<h3 class="page-title">PARLIAMENTARY TEAM</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+    		var isLoggedIn = false;
+			if(localStorage.getItem('logged') == 'yes') {
+      			isLoggedIn = true;
+      			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'accshow';
+      			}
+      			document.getElementById('loginnav').id = 'hidden';
+      			console.log("logged in");
+      			console.log(localStorage.getItem('accRow'));
+    		} else {
+    			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'loginnav';
+      			}
+      			document.getElementById('accshow').id = 'hidden';
+      			console.log("logged out");
+    		}
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<h3 class="mini-header">Updates</h3>
+	<div class="updates-row2">
+		<div>
+			<p><span class="updates-title">Campolindo Parliamentary Tournament</span><br>Congrats to Thomas Li & <br>Anshika Agarwal for reaching semifinals!</p>
+			<p><span class="updates-title">CFL State Quals</span><br>Congrats to Thomas Li & <br>Grant Cheng for qualifying!</p>
+			<p><span class="updates-title">League 3</span><br>Congrats to Nicolas Mejia & Oscar<br>Chung and Ben Chen & Ting Yang<br>for going undefeated in JV!</p>
+			<p><span class="updates-title">Evergreen PF/Parli Invitational</span><br>Congrats to Thomas Li & Anshika Agarwal<br>for reaching quarterfinals!</p>
+			<p><span class="updates-title">SCU Dempsey Cronin Invitational</span><br>Congrats to Grant Cheng & Brandon Chung<br>for advancing to Double Octos!</p>
+			<p><span class="updates-title">CFL SuperDebate 1</span><br>Congrats to the following teams for going<br>undefeated/getting wildcards to state quals!:<ul>
+				<li>Varsity: Brandon Chung & Anshika Agarwal</li>
+				<li>JV: Kevin Bao & Roland Liu</li></ul>
+			</p>
+			<p><span class="updates-title">Stephen Stewart Invitational</span><br>Congrats to teams Grant Cheng & Thomas Li<br>and Anshika Agarwal & Brandon Chung for<br>breaking to double-octos!</p>
+		</div>
+
+		<div>
+			<p><span class="updates-title">Berkeley High School Parliamentary Invitational</span><br>Congrats to Anshika Agarwal & Brandon <br>Chung for advancing to semifinals <br>after being the top prelim seed!</p>
+			<p><span class="updates-title">Stanford Invitational</span><br>Congrats to the following teams:<ul>
+				<li>Varsity: Thomas Li & Anshika Agarwal - Octos</li>
+				<li>JV: Oscar Chung & Nicolas Mejia -<br>5th & 6th place speaker respectively</li></ul>
+			</p>
+			<p><span class="updates-title">Nueva Parli Invitational</span><br>Congrats to Anshika Agarwal & Thomas <br>Li for advancing to semifinals!<br>They also recieved 4th & 5th speaker<br> repectively overall.</p>
+			<p><span class="updates-title">National Parliamentary Debate Invitational</span><br>Congratulations to Thomas Li & Grant Cheng<br>for reaching semifinals and Anshika<br>& Brandon Chung for reaching<br>double-octofinals at one of the most<br>prestigious parli tournaments of the year!</p>
+			<p><span class="updates-title">Cal Parli Invitational</span><br>Congrats to Grant Cheng & Thomas Li<br>and Anshika Agarwal & Brandon Chung for<br>advancing to Double Octos!</p>
+			<p><span class="updates-title">Notre Dame Parli Warm-Up Invitational</span><br>Congrats to Brandon Chung & Thomas Li<br>for reaching finals and placing 2nd overall!<br>Ben Chen also recieved 2nd speaker<br>overall in Novice!</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<div class="card-row4" style="width: 70%; margin: 0px 15% 40px 15%;">
+		<img class="photos" src="img/parli1.png">
+		<img class="photos" src="img/parli2.jpg">
+		<img class="photos" src="img/parli3.png">
+		<img class="photos" src="img/parli4.png">
+	</div>
+
+	<div class="centered-div">
+		<p class="paragraph"><span class="debate-format">Parliamentary debate(Parli) </span>is the newest form of debate to American high school circuits. A unique feature of this style is its varying topic every round. Prior to the start of the debate, a resolution is announced and both teams have twenty minutes to prepare their side of the case. Parli encourages the use of logic and analysis in argument building, as students learn to tie together researched evidence to explain the implications of passing a plan. As a result, participants accrue a wide breadth of knowledge regarding a multitude of domestic and international issues as well as a deep understanding of economics, foreign policy, and critical education.</p>
+		<span class="debate-format">Meets Wednesdays from 3-5 PM in Room N-206</span>
+	</div>
+
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>

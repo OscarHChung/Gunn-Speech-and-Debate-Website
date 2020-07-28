@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Summer Camp - Gunn Speech & Debate</title>
+	<link rel="shortcut icon" href="img/suit.png"/>
+	<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+</head>
+
+<body>
+	<div class="bg">
+		<div class="topnav" id="myTopnav">
+			<a href="index" id="left-nav">GUNN SPEECH AND DEBATE</a>
+			<a href="javascript:void(0);" class="icon" onclick="responsiveNavBar()">
+				<i class="fa fa-bars"></i>
+			</a>
+			<a id="accshow" href="myaccount">MY ACCOUNT</a>
+			<a id="loginnav" href="login-register">LOGIN/REGISTER</a>
+			<a id="current-page" href="summercamp">SUMMER CAMP</a>
+			<a href="contact">CONTACT</a>
+			<div class="dropdown" id="dropdown1">
+				<button class="dropbtn">RESOURCES
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="debaters">FOR DEBATERS</a>
+					<a href="judges">FOR JUDGES</a>
+				</div>
+			</div>
+			<a href="calendar">CALENDAR</a>
+			<div class="dropdown" id="dropdown2">
+				<button class="dropbtn">EVENTS
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="parliamentary">PARLIAMENTARY</a>
+					<a href="policy">POLICY</a>
+					<a href="publicforum">PUBLIC FORUM</a>
+					<a href="speech">SPEECH</a>
+				</div>
+			</div>
+			<a href="about">ABOUT</a>
+			<a href="index">HOME</a>
+		</div>
+		<h3 class="page-title-long">Gunn S&D Summer Camp</h3>
+	</div>
+	<script>
+      	$(document).ready(function() {
+
+    		$(window).scroll(function() {
+        		var scrollTop = $(window).scrollTop();
+
+        		if (scrollTop > 1) {
+            		$('.topnav').addClass('navcolor');
+        		} else {
+            		$('.topnav').removeClass('navcolor');
+        		}
+
+    		});
+    		var isLoggedIn = false;
+			if(localStorage.getItem('logged') == 'yes') {
+      			isLoggedIn = true;
+      			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'accshow';
+      			}
+      			document.getElementById('loginnav').id = 'hidden';
+      			console.log("logged in");
+      			console.log(localStorage.getItem('accRow'));
+    		} else {
+    			if(document.getElementById('hidden') != null) {
+        			document.getElementById('hidden').id = 'loginnav';
+      			}
+      			document.getElementById('accshow').id = 'hidden';
+      			console.log("logged out");
+    		}
+		});
+
+		function responsiveNavBar() {
+			var x = document.getElementById("myTopnav");
+			var y = document.getElementById("dropdown1");
+			var z = document.getElementById("dropdown2");
+			var i = document.getElementById("left-nav");
+			if(x.className === "topnav") {
+				x.className += " responsive";
+				y.className += " responsive";
+				z.className += " responsive";
+				i.className += " responsive";
+			} else {
+				x.className = "topnav";
+				y.className = "dropdown";
+				z.className = "dropdown";
+				i.className = "";
+			}
+		}
+	</script>
+
+	<div class="centered-div" style="width: 70%; margin: 30px 15% 30px 15%;">
+		<h3 class="mini-header-left">Who Are We?</h3>
+		<p class="paragraph" style="margin-left: 1%">
+			Gunn Speech and Debate is an entirely student run award-winning club that prides itself on its ability to teach novices and get debaters to the highest levels of excellence. We focus on motivation and strive toward a warm, open community that can give back during times of need such as this one. That is why we are hosting an online summer camp, where rising 6th to 9th graders, regardless of their experience can spend a week understanding more about public speaking and argumentation!
+		</p>
+	</div>
+
+	<div class="centered-div" style="width: 70%; margin: 0px 15% 30px 15%;">
+		<h3 class="mini-header-left">Why Us?</h3>
+		<p class="paragraph" style="margin-left: 1%">
+			Gunn Speech and Debate is nationally ranked across many branches of Speech and Debate. You can be sure that you are being taught by some of the top debaters in the nation. Our volunteer, unpaid staffers share a passion for debating and teaching. The following are some of our club’s recent achievements:
+			<ul>
+				<li>Finalists at the National Speech and Debate Tournament in Policy Debate</li>
+				<li>Semifinalists at the National Parliamentary Debate Invitational</li>
+				<li>Quarterfinals at the National Speech and Debate Tournament in World Schools</li>
+				<li>Quarterfinals at the Tournament of Champions in Public Forum Debate</li>
+				<li>Ranked #5 in the nation for Parliamentary debate</li>
+				<li>Champions of the Berkeley Speech and Debate Invitational in Public Forum Debate</li>
+				<li>Champions of the Robert Garcia Speech and Debate Invitational in Public Forum Debate</li>
+				<li>Finalists at the MLK Logan Speech and Debate tournament in Policy Debate</li>
+			</ul>
+		</p>
+		<p class="paragraph" style="margin-left: 1%">
+			By the end of the week, students will have a firm grasp of crucial skills for any kind of work such as giving speeches with little preparation, researching articles, and debating regardless of the topic. Sign up below!
+		</p>
+	</div>
+
+	<div class="centered-div" style="width: 70%; margin: 0px 15% 60px 15%;">
+		<h3 class="mini-header-left">Sign Up!</h3>
+		<p class="paragraph" style="margin-left: 1%">
+			<span style="font-family: 'OpenSansBold', Helvetica, sans-serif;">DEADLINE:</span> JULY 15TH!<br><br>
+			<span style="font-family: 'OpenSansBold', Helvetica, sans-serif;">Dates:</span> July 19th (Sunday) to July 25th (Saturday)<br><br>
+			<span style="font-family: 'OpenSansBold', Helvetica, sans-serif;">When:</span> 10 AM - 3 PM (Lunch break from 12-12:30)<br><br>
+			<span style="font-family: 'OpenSansBold', Helvetica, sans-serif;">Where:</span> Online through Zoom, invitation link will be sent via email to the students directly<br><br>
+			<span style="font-family: 'OpenSansBold', Helvetica, sans-serif;">Who:</span> Anyone who is a rising 6th to 9th grader is eligible<br><br>
+			<span style="font-family: 'OpenSansBold', Helvetica, sans-serif;">Payment:</span> $220 through Paypal to mrjohncordes@gmail.com  (Contact gunnsd@gmail.com or text 650-441-9959 if you must find an alternative way to pay/need financial support) All funds received will help support the club's activities this coming school year.
+		</p>
+	</div>
+
+	<div class="centered-div" style="text-align: center; margin-bottom: 100px; margin-top: 100px;">
+		<a href="https://forms.gle/1jPC24gNWdkgjb998" id="register-camp-button" target="_blank">Register Now!</a>
+	</div>
+
+	<footer>
+		<p>Connect With Us!</p>
+		<div class="logorow">
+			<a target="_blank" class="logolink" href="https://www.facebook.com/groups/356240998602144/">
+				<div class="circle">
+					<img id="facebooklogo" src="img/facebook.png">
+				</div>
+			</a>
+			<a class="logolink" href="mailto:gunn.sd@gmail.com">
+				<div class="circle">
+					<img id="emaillogo" src="img/emaillogo.png">
+				</div>
+			</a>
+			<a target="_blank" class="logolink" href="https://gunn-titans-store.myschoolcentral.com/asbworks/(S(uh0uase0pqmhk0ewladm3lh3))/apps/webstore/pages/Product.aspx?org=6029&pid=15542">
+				<div class="circle">
+					<img id="donatebutton" src="img/donatebutton.png">
+				</div>
+			</a>
+		</div>
+	</footer>
+
+</body>
+
+</html>
