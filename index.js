@@ -42,10 +42,10 @@ function submit() {
 function makeApiCall() {
       var params = {
         // The spreadsheet to request.
-        spreadsheetId: '1HS7V5NTbVzc1Ctlk_08_QSU8FfjlB2-JmsFz7TLX--w',  // TODO: Update placeholder value.
+        spreadsheetId: SPREADSHEETID,  // TODO: Update placeholder value.
 
         // The ranges to retrieve from the spreadsheet.
-        ranges: ['A2:D'],  // TODO: Update placeholder value.
+        ranges: [range],  // TODO: Update placeholder value.
 
         // True if grid data should be returned.
         // This parameter is ignored if a field mask was set in the request.
@@ -81,8 +81,8 @@ function makeApiCall() {
             alert("One of your inputs are invalid.")
         } else {
             gapi.client.sheets.spreadsheets.values.update({
-                spreadsheetId: '1HS7V5NTbVzc1Ctlk_08_QSU8FfjlB2-JmsFz7TLX--w',
-                range: ['A'+(numRows+2)+':D'+(numRows+2)],
+                spreadsheetId: SPREADSHEETID,
+                range: [range],
                 valueInputOption: "RAW",
                 resource: body
             }).then((response) => {
@@ -98,9 +98,9 @@ function makeApiCall() {
     }
 
     function initClient() {
-      var API_KEY = 'AIzaSyA1fFau5KZTwjchpqNhvuq4FhRQ-V6QNA0';  // TODO: Update placeholder with desired API key.
+      var API_KEY = APIKEY;  // TODO: Update placeholder with desired API key.
 
-      var CLIENT_ID = '15098280011-taegk4jia8jcmuv06m2es7ak4qkl77cp';  // TODO: Update placeholder with desired client ID.
+      var CLIENT_ID = CLIENTID;  // TODO: Update placeholder with desired client ID.
 
       // TODO: Authorize using one of the following scopes:
       //   'https://www.googleapis.com/auth/drive'
