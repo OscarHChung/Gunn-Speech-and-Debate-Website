@@ -30,19 +30,19 @@ $(document).ready(function() {
     var branchNum = 0;
     if(branches.includes("parli")) {
       branchNum++;
-      branchIds.push('1wHecGoFhU37Lebo7xUMBJw7AWiIBymixq2qaot2cWr4');
+      branchIds.push(SPREADSHEETID);
     }
     if(branches.includes("policy")) {
       branchNum++;
-      branchIds.push('1AUQrRLWJdfu8apgLUEcSrmSNFpOTB2o5QZ71264lKcE');
+      branchIds.push(SPREADSHEETID);
     }
     if(branches.includes("public-forum")) {
       branchNum++;
-      branchIds.push('15uL8FbsaQqvIme-Zaj_fSo5DZ8eeG9B2vOjZF3_DaUY');
+      branchIds.push(SPREADSHEETID);
     }
     if(branches.includes("speech")) {
       branchNum++;
-      branchIds.push('1q9qQwPizhaTcDZ3jbyG1QXlwsYORB8D8uTsQVLJSx5Y');
+      branchIds.push(SPREADSHEETID);
     }
     localStorage.setItem('branch-ids', JSON.stringify(branchIds));
     localStorage.setItem('branch-num', branchNum);
@@ -55,10 +55,10 @@ $(document).ready(function() {
 function updateRegistration() {
   var params = {
     // The spreadsheet to request.
-    spreadsheetId: '1U40JEWyRSRuplnIxIRDRMAw-Q1AgCjG0zLF55me0t_w',  // TODO: Update placeholder value.
+    spreadsheetId: SPREADSHEETID,  // TODO: Update placeholder value.
 
     // The ranges to retrieve from the spreadsheet.
-    ranges: ['A2:I'],  // TODO: Update placeholder value.
+    ranges: [range],  // TODO: Update placeholder value.
 
     // True if grid data should be returned.
     // This parameter is ignored if a field mask was set in the request.
@@ -91,8 +91,8 @@ function updateRegistration() {
     localStorage.setItem('branches', branches);
 
     gapi.client.sheets.spreadsheets.values.update({
-      spreadsheetId: '1U40JEWyRSRuplnIxIRDRMAw-Q1AgCjG0zLF55me0t_w',
-      range: ['E'+(accRow)+':I'+(accRow)],
+      spreadsheetId: SPREADSHEETID,
+      range: [range],
       valueInputOption: "RAW",
       resource: body
     }).then((response) => {
@@ -105,9 +105,9 @@ function updateRegistration() {
 
 
 function initClient() {
-  var API_KEY = 'AIzaSyA1fFau5KZTwjchpqNhvuq4FhRQ-V6QNA0';  // TODO: Update placeholder with desired API key.
+  var API_KEY = APIKEY;  // TODO: Update placeholder with desired API key.
 
-  var CLIENT_ID = '15098280011-taegk4jia8jcmuv06m2es7ak4qkl77cp';  // TODO: Update placeholder with desired client ID.
+  var CLIENT_ID = CLIENTID;  // TODO: Update placeholder with desired client ID.
 
   var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
 
@@ -140,9 +140,9 @@ function initClientBranch() {
 
   var branchNum = localStorage.getItem('branch-num');
 
-  var API_KEY = 'AIzaSyA1fFau5KZTwjchpqNhvuq4FhRQ-V6QNA0';  // TODO: Update placeholder with desired API key.
+  var API_KEY = APIKEY;  // TODO: Update placeholder with desired API key.
 
-  var CLIENT_ID = '15098280011-taegk4jia8jcmuv06m2es7ak4qkl77cp';  // TODO: Update placeholder with desired client ID.
+  var CLIENT_ID = CLIENTID';  // TODO: Update placeholder with desired client ID.
 
   var SCOPE = 'https://www.googleapis.com/auth/spreadsheets';
 
@@ -160,10 +160,10 @@ function initClientBranch() {
 function showBranch(ids, branchNum) {
   var params = {
     // The spreadsheet to request.
-    spreadsheetId: '1U40JEWyRSRuplnIxIRDRMAw-Q1AgCjG0zLF55me0t_w',  // TODO: Update placeholder value.
+    spreadsheetId: SPREADSHEETID,  // TODO: Update placeholder value.
 
     // The ranges to retrieve from the spreadsheet.
-    ranges: ['A1:I'],  // TODO: Update placeholder value.
+    ranges: [range],  // TODO: Update placeholder value.
 
     // True if grid data should be returned.
     // This parameter is ignored if a field mask was set in the request.
