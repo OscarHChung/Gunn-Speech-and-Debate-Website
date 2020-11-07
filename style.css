@@ -509,6 +509,45 @@ textarea::-webkit-input-placeholder {
 	}
 }
 
+.tournament-reg-container {
+	width: 70%;
+	height: 100px;
+	background-color: white;
+	margin: 40px 15% 50px 15%;
+	display: flex;
+	border: solid 3px #333;
+}
+.tournament-reg-name {
+	font-family: "OpenSans", Helvetica, sans-serif;
+	font-size: 25px;
+	line-height: 84px;
+	width: 70%;
+	background-color: transparent;
+	padding-left: 10px;
+	color: #333;
+	margin: 8px 8px 8px 8px;
+}
+.tournament-reg-button {
+	width: 30%;
+	background-color: #b02121;
+	margin: 10px 10px 10px 10px;
+	border: none;
+	font-family: "OpenSans", Helvetica, sans-serif;
+	font-size: 20px;
+	color: white;
+	outline: none;
+}
+.tournament-reg-button:focus {
+	border: none;
+	outline: none;
+}
+.tournament-reg-button:hover {
+	cursor: pointer;
+}
+.tournament-reg-button:active {
+	background-color: #961d1d;
+}
+
 .calendar {
 	border-width:0;
 	width: 100%;
@@ -519,6 +558,12 @@ textarea::-webkit-input-placeholder {
 	color: #b02121;
 }
 
+.open-about, .open-about:active, .openabout:hover {
+	background: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
 .card-row1 {
 	margin: 0px 0px 25px 0px;
 	display: flex;
@@ -623,6 +668,64 @@ textarea::-webkit-input-placeholder {
 	font-family: "OpenSansItalic", Helvetica, sans-serif;
 	font-size: 16px;
 	color: #333;
+}
+#blurb-close {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+}
+#blurb-name {
+	text-align: center;
+	margin: 0;
+	font-family: "OpenSans", Helvetica, sans-serif;
+	font-size: 30px;
+	color: #FFFFFF;
+}
+#blurb-title {
+	text-align: center;
+	margin: 0;
+	font-family: "OpenSansItalic", Helvetica, sans-serif;
+	font-size: 24px;
+	color: black;
+}
+#blurb-paragraph {
+	text-align: center;
+	width: 80%;
+	margin-left: 10%;
+	font-family: "OpenSansItalic", Helvetica, sans-serif;
+	font-size: 20px;
+}
+.blurb-img-container {
+	height: 200px;
+	text-align: center;
+}
+.blurb-img-container img {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+	margin: 10px 5px 0px 5px;
+	border-radius: 50%;
+}
+#blurb {
+	visibility: hidden;
+	opacity: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #911e26;
+    color: #FFFFFF;
+    width: 70%;
+    max-width: 600px;
+    max-height: 600px;
+    padding: 30px;
+    border: 10px solid #FFFFFF;
+    outline: solid 2px black;
+    z-index: 20;
+    transition: all 0.3s;
 }
 #coaches {
 	margin-bottom: 30px;
@@ -1079,6 +1182,26 @@ footer p {
     display: none;
     z-index: 20;
 }
+#popup-box-temp {
+	z-index: 100;
+	background-color: #b02121;
+	text-align: center;
+	margin: 0;
+	padding: 40px 0 40px 0;
+}
+#popup-box-temp p{
+	display: inline-block;
+	height: 100%;
+	margin: 0;
+	width: 95%;
+	font-size: 22px;
+  	font-family: "OpenSans", Helvetica, sans-serif;
+  	color: white;
+}
+#temp-close {
+	display: inline-block;
+	margin: 10px 20px 0 0;
+}
 
 #popup-close {
     position: absolute;
@@ -1178,4 +1301,22 @@ footer p {
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+.tournament-checkbox-text {
+	width: 225px;
+	height: 25px;
+	line-height: 25px;
+	display: inline-block;
+}
+.tournament-checkbox {
+	margin: 0;
+	max-width: 30px;
+	height: 30px;
+	display: inline-block;
+	clear: right;
+	vertical-align: middle;
+}
+.tournament-checkbox:hover {
+	cursor: pointer;
 }
